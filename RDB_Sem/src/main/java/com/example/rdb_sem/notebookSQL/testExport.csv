@@ -1,0 +1,10 @@
+00000,14,1366 x 768,Full HD,Intel Core i3(Skylake / 6. generace),4,DDR4 SODIMM,2.4,12,no OS,1313,SSHD,NVIDIA GeForce GTX 107,red,17,375,300,4
+11111,14,1280 x 800,Full HD,Intel Core i3(Kaby Lake / 7. generace) ,4,DDR3 SODIMM,2.133,8,UHD 4K0,1923,SSD,NVIDIA Quadro M1000M,red,33,397,341,1
+22222,17.3,1920 x 1080,Full HD,Intel Core i3(Kaby Lake / 7. generace) ,2,DDR4 SODIMM,1.666,64,Windows 8.1,1638,SSHD,AMD Radeon R7 M445,red,41,419,382,5
+33333,17.3,2560 x 1440,WQHD,Intel Core M3(Kaby Lake / 7. generace),2,DDR3 SODIMM,2.133,32,UHD 4K0,1424,HDD,NVIDIA GeForce GTX 960M,red,16,440,274,0
+44444,13.3,3200 x 1800,QHD +,Intel Core i5(Skylake / 6. generace),2,DDR3 SODIMM,2.133,16,UHD 4K0,400,SSD,NVIDIA GeForce GTX 1070,red,23,261,315,4
+55555,13.3,3200 x 1800,QHD +,Intel Core M3(Kaby Lake / 7. generace),2,DDR4 SODIMM,2.133,12,Windows 10,1749,HDD,NVIDIA Quadro M1000M,black,30,283,356,1
+66666,17.3,1366 x 768,HD,Intel Core i3(Haswell / 4. generace),2,DDR3 SODIMM,1.666,8,no OS,1923,HDD,AMD Radeon R5 M430,black,47,304,248,3
+77777,17.3,3200 x 1800,WXGA,Intel Core i7(Crystal Well / 4. generace),4,LPDDR4,2.133,64,Linux,806,SSHD,NVIDIA GeForce GTX 1050,black,13,321,289,0
+88888,17.3,3840 x 2160,UHD 4K0,Intel Core i7(Broadwell / 5. generace),2,DDR3 SODIMM,2.133,32,UHD 4K0,611,HDD,NVIDIA GeForce GTX 1060,black,29,343,330,2
+99999,17.3,3840 x 2160,WXGA,Intel Core i7(Broadwell / 5. generace),2,DDR4 SODIMM,1.666,16,Windows 8.1,397,SSD,AMD Radeon R5 M430,grey,36,365,370,5
