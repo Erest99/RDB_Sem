@@ -1,20 +1,20 @@
-package com.example.rdb_sem.notebookSQL;
+package com.example.rdb_sem.myMongo;
 
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-@Entity
+@Document
 @Data
 @NoArgsConstructor
 @Builder
-public class Color {
+public class MonColor {
 
-    public Color(String color) {
+    public MonColor(String color) {
         this.color = color;
     }
 

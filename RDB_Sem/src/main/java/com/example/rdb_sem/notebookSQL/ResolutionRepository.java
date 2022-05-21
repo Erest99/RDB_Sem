@@ -7,5 +7,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ResolutionRepository extends JpaRepository<Resolution,Long> {
     //DynamicType.Builder.RecordComponentDefinition.Optional<Product> findProductByNameAndState(String id);
-
+    Boolean existsByResolution(String resolution);
 }

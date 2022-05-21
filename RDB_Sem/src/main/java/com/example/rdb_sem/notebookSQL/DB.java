@@ -1,5 +1,8 @@
 package com.example.rdb_sem.notebookSQL;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Example;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -9,11 +12,13 @@ import java.util.Scanner;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-public class DB {
+public class DB  {
+
+
 
     public static Map<String, Product> convertListToMap(List<Product> list) {
         return list.stream()
-                .collect(Collectors.toMap(Product::getId, Function.identity()));
+                .collect(Collectors.toMap(Product::getProdId, Function.identity()));
     }
 
     public static List<Product> readCSV(String fileName) throws FileNotFoundException {
@@ -31,7 +36,7 @@ public class DB {
 
         String id =  parts[0];
         Float diagonal =  Float.valueOf(parts[1]);
-        String resolution = parts[2];
+        Resolution resolution = new Resolution(parts[2]);
         String resolution_word = parts[3];
         String processor_type = parts[4];
         Integer core_count = Integer.valueOf(parts[5]);
@@ -42,12 +47,12 @@ public class DB {
         Integer hdd_size = Integer.valueOf(parts[10]);
         String hdd_type = parts[11];
         String gpu_type = parts[12];
-        Color color = Color.valueOf(parts[13]);
+        Color color = new Color(parts[13]);
         Integer height = Integer.valueOf(parts[14]);
         Integer width = Integer.valueOf(parts[15]);
         Integer depth = Integer.valueOf(parts[16]);
         Integer weight = Integer.valueOf(parts[17]);
-        Boolean isConsistent = checkResolutionConsistency(resolution,resolution_word);
+        String isConsistent = checkResolutionConsistency(parts[2],resolution_word);
 
         return new Product(
                 id, diagonal, resolution, resolution_word,
@@ -58,17 +63,20 @@ public class DB {
         );
     }
 
-    public static boolean checkResolutionConsistency(String resolution,String res_word)
+    private static String checkResolutionConsistency(String resolution,String res_word)
     {
-        Boolean value;
-        if(resolution.equals("1920 x 1080")  && res_word.equals("Full HD"))value = true;
-        else if(resolution.equals("1366 x 768") && res_word.equals("HD"))value = true;
-        else if(resolution.equals("1280 x 800") && res_word.equals("WXGA"))value = true;
-        else if(resolution.equals("2560 x 1440") && res_word.equals("WQHD"))value = true;
-        else if(resolution.equals("3200 x 1800") && res_word.equals("QHD +"))value = true;
-        else if(resolution.equals("3840 x 2160") && res_word.equals("UHD 4K0"))value = true;
-        else value = false;
+        StringBuilder value = new StringBuilder("000000000000000000");
+        if(resolution.equals("1920 x 1080")  && res_word.equals("Full HD"))value.setCharAt(3, '0');
+        else if(resolution.equals("1366 x 768") && res_word.equals("HD"))value.setCharAt(3, '0');
+        else if(resolution.equals("1280 x 800") && res_word.equals("WXGA"))value.setCharAt(3, '0');
+        else if(resolution.equals("2560 x 1440") && res_word.equals("WQHD"))value.setCharAt(3, '0');
+        else if(resolution.equals("3200 x 1800") && res_word.equals("QHD +"))value.setCharAt(3, '0');
+        else if(resolution.equals("3840 x 2160") && res_word.equals("UHD 4K0"))value.setCharAt(3, '0');
+        else value.setCharAt(3, '1');
 
-        return value;
+        return value.toString();
     }
+
+
+
 }

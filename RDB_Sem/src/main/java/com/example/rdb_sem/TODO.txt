@@ -1,0 +1,4 @@
+//TODO načítání JSON
+//TODO povolení vkládání záznamů se stejnám prod_id
+//TODO GUI pro mongo
+//TODO změny v nosql za běhu

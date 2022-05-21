@@ -11,7 +11,7 @@ import java.util.List;
 @Configuration
 public class ResolutionConfig {
 
-    @Bean
+    @Bean("eresolution")
     CommandLineRunner commandLineRunner2(ResolutionRepository repository) throws FileNotFoundException {
         List<Resolution> list = List.of(
 
@@ -25,13 +25,13 @@ public class ResolutionConfig {
                         "1366 x 768"
                 ),
                 new Resolution(
-                        "2560 x 1440"
-                ),
-                new Resolution(
                         "3200 x 1800"
                 ),
                 new Resolution(
                         "3840 x 2160"
+                ),
+                new Resolution(
+                        "2560 x 1440"
                 )
 
 

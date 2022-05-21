@@ -7,15 +7,15 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 
-@Service
+//@Service
 public class ResolutionService {
 
 
-     private final ResolutionRepository resolutionRepository;
-
-     @Autowired
-     public ResolutionService(ResolutionRepository resolutionRepository) {
-          this.resolutionRepository = resolutionRepository;
-     }
+//     private final ResolutionRepository resolutionRepository;
+//
+//     @Autowired
+//     public ResolutionService(ResolutionRepository resolutionRepository) {
+//          this.resolutionRepository = resolutionRepository;
+//     }
 
 }
