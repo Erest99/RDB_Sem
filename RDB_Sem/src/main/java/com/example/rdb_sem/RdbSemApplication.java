@@ -6,6 +6,7 @@ import com.example.rdb_sem.myMongo.NotebookService;
 import com.example.rdb_sem.notebookSQL.*;
 import com.fasterxml.jackson.databind.ObjectMapper;
 //import org.apache.tomcat.util.json.JSONParser;
+import com.github.cloudyrock.spring.v5.EnableMongock;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -33,7 +34,7 @@ import java.util.List;
 
 import java.io.FileNotFoundException;
 
-
+@EnableMongock
 @SpringBootApplication
 public class RdbSemApplication {
 
